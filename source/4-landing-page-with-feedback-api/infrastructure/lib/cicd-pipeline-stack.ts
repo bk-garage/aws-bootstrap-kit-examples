@@ -29,7 +29,7 @@ export class LandingPagePipelineStack extends Stack {
 
         const sourceArtifact = new Artifact();
         const cloudAssemblyArtifact = new Artifact();
-        const oauth = SecretValue.secretsManager("GITHUB_TOKEN");
+        const oauth = SecretValue.secretsManager("GITHUB_TOKEN_CI");
 
         const pipeline = new CdkPipeline(this, "LandingPagePipeline", {
             sourceAction: new GitHubSourceAction({

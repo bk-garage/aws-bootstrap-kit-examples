@@ -123,7 +123,7 @@ To learn more, check the [official doc](https://docs.aws.amazon.com/cli/latest/u
 1. Link your GitHub repository to AWS by
     1. Pushing your github personal secret token (follow [this instruction](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) if you don't have one with **admin:repo_hook** full control and **repo** full control) in AWS Secrets Manager, a service that stores your secret securely
         ```sh
-        aws --profile main-admin secretsmanager create-secret --name GITHUB_TOKEN --secret-string <YOUR_GITHUB_PERSONAL_ACCESS_TOKEN>
+        aws --profile main-admin secretsmanager create-secret --name GITHUB_TOKEN_CI --secret-string <YOUR_GITHUB_PERSONAL_ACCESS_TOKEN>
         ```
     1. Set in `source/1-SDLC-organization/cdk.json` the following variables:
 

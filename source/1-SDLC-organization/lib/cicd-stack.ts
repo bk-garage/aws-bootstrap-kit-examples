@@ -58,7 +58,7 @@ export class AWSBootstrapKitLandingZonePipelineStack extends Stack {
       `${this.node.tryGetContext('github_alias')}/${this.node.tryGetContext('github_repo_name')}`,
       this.node.tryGetContext('github_repo_branch'),
       {
-        authentication: SecretValue.secretsManager('GITHUB_TOKEN')
+        authentication: SecretValue.secretsManager('GITHUB_TOKEN_CI')
       }
     );
 
