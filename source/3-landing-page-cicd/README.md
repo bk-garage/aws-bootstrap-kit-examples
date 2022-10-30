@@ -146,7 +146,7 @@ When you have gone through the [SDLC Organization CDK app](../1-SDLC-organizatio
 Now, we have to create the same secret in the *CICD* account so that the CodePipeline service can access the source code in your GitHub repository.
 
 ```
-aws --profile cicd secretsmanager create-secret --name GITHUB_TOKEN_CI --secret-string <YOUR_GITHUB_PERSONAL_ACCESS_TOKEN>
+aws --profile cicd secretsmanager create-secret --name GITHUB_TOKEN --secret-string <YOUR_GITHUB_PERSONAL_ACCESS_TOKEN>
 ```
 
 #### Update the cdk.json file parameters
@@ -277,7 +277,7 @@ cdk destroy --profile cicd
 
 #### Troubleshooting
 
-* If you get a CloudFormation Internal Failure error while deploying the stack, please check you have properly created the GITHUB_TOKEN_CI secret
+* If you get a CloudFormation Internal Failure error while deploying the stack, please check you have properly created the GITHUB_TOKEN secret
 * If you get an error 400 message as a detailed error message when CodeBuild fails, please check you have properly modify your cdk.json file
 * If you get an error message stating *Cannot have more thant 1 builds in queue for the account* as a detailed error message when CodeBuild fails, please retry the step in CodePipeline. You get this error because your AWS account is new. After a few retry, the limit will automatically increase.
 

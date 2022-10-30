@@ -33,7 +33,7 @@ export class LandingPagePipelineStack extends Stack{
                         owner: this.node.tryGetContext('github_alias'),
                         repo: this.node.tryGetContext('github_repo_name'),
                         branch: this.node.tryGetContext("github_repo_branch"),
-                        oauthToken: SecretValue.secretsManager('GITHUB_TOKEN_CI')
+                        oauthToken: SecretValue.secretsManager('GITHUB_TOKEN')
                     }
                 ),
                 synthAction: SimpleSynthAction.standardNpmSynth(

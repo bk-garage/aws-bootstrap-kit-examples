@@ -85,7 +85,7 @@ cdk destroy --profile cicd
 
 ## Troubleshooting
 
-- If you get a CloudFormation Internal Failure error while deploying the stack, please check you have properly created the GITHUB_TOKEN_CI secret
+- If you get a CloudFormation Internal Failure error while deploying the stack, please check you have properly created the GITHUB_TOKEN secret
 - If you get an error 400 message as a detailed error message when CodeBuild fails, please check you have properly modified your cdk.json file
 - If you get an error message stating _Cannot have more thant 1 build in queue for the account_ as a detailed error message when CodeBuild fails, please retry the step in CodePipeline. You are reaching a limit due to the fact that your AWS account is new. You can make a support request to increase the limit.
 
