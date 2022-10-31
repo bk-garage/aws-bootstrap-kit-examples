@@ -9,7 +9,7 @@
     "domain_name": "sevdali.uk",
     "force_email_verification": true,
     "pipeline_deployable_regions": [
-      "eu-west-2"
+        "eu-west-2"
     ]
   }
 }
